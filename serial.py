@@ -23,8 +23,7 @@ class SerialGenerator:
 
     def __init__(self, start):
         "Starts counting up by one at start number"
-        self.start = start
-        self.original = start
+        self.next = self.original = start
 
     def __repr__(self):
         """Show representation"""
@@ -33,16 +32,19 @@ class SerialGenerator:
     def generate(self):
         "Adds one to start"
 
-        initial_start = self.start
+        # initial_start = self.start
 
-        if initial_start == self.start:
-            self.start += 1
-            return initial_start
-        else:
-            self.start += 1
-            return self.start
+        # if initial_start == self.start:
+        #     self.start += 1
+        #     return initial_start
+        # else:
+        #     self.start += 1
+        #     return self.start
+        
+        self.next += 1
+        return self.next - 1
 
     def reset(self):
         "Resets start to initial number"
-        self.start = self.original
+        self.next = self.original
 
